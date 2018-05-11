@@ -49,6 +49,10 @@ web_include_css = [
 	"assets/css/frappe-web.css"
 ]
 
+custom_web_include_css = [
+	"assets/css/custom-frappe-web.css"
+]
+
 website_route_rules = [
 	{"from_route": "/blog/<category>", "to_route": "Blog Post"},
 	{"from_route": "/kb/<category>", "to_route": "Help Article"},

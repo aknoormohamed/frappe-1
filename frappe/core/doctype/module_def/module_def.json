@@ -41,6 +41,7 @@
    "reqd": 1, 
    "search_index": 0, 
    "set_only_once": 0, 
+   "translatable": 0, 
    "unique": 0
   }, 
   {
@@ -70,6 +71,7 @@
    "reqd": 1, 
    "search_index": 0, 
    "set_only_once": 0, 
+   "translatable": 0, 
    "unique": 0
   }, 
   {
@@ -101,6 +103,7 @@
    "reqd": 0, 
    "search_index": 0, 
    "set_only_once": 0, 
+   "translatable": 0, 
    "unique": 0
   }
  ], 
@@ -115,7 +118,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2017-07-13 03:05:28.213656", 
+ "modified": "2018-05-03 11:29:04.793453", 
  "modified_by": "Administrator", 
  "module": "Core", 
  "name": "Module Def", 
@@ -123,7 +126,6 @@
  "permissions": [
   {
    "amend": 0, 
-   "apply_user_permissions": 0, 
    "cancel": 0, 
    "create": 1, 
    "delete": 1, 
@@ -143,10 +145,9 @@
   }, 
   {
    "amend": 0, 
-   "apply_user_permissions": 0, 
    "cancel": 0, 
-   "create": 0, 
-   "delete": 0, 
+   "create": 1, 
+   "delete": 1, 
    "email": 0, 
    "export": 0, 
    "if_owner": 0, 
@@ -159,7 +160,7 @@
    "set_user_permissions": 0, 
    "share": 0, 
    "submit": 0, 
-   "write": 0
+   "write": 1
   }
  ], 
  "quick_entry": 1, 

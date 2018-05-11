@@ -116,7 +116,14 @@ def build_context(context):
 	if not context.base_template_path:
 		app_base = frappe.get_hooks("base_template")
 		context.base_template_path = app_base[0] if app_base else "templates/base.html"
-
+		doc = frappe.get_doc("Contact Us Settings", "Contact Us Settings")
+		context.Phone=doc.phone
+		context.Email=doc.email_id
+		context.Twitter=doc.twitter
+		context.Facebook=doc.facebook_id
+		context.LinkedIn=doc.linked_in
+		context.Youtube=doc.youtube
+		context.Instagram=doc.instagram
 	if context.title_prefix and context.title and not context.title.startswith(context.title_prefix):
 		context.title = '{0} - {1}'.format(context.title_prefix, context.title)
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
+	<meta name="generator" content="frappe">
+    {% block favicon %}
+	<link rel="shortcut icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+	<link rel="icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+    {% endblock %}
+	{%- block head -%}
+		{% block meta_block %}
+    {% endblock %}
+		{% if head_html is defined -%}
+		{{ head_html or "" }}
+		{%- endif %}
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Poppins:100,200,300,400,500,600,700">
+                <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Caveat+Brush">
+          
+ <link rel="stylesheet" href="/assets/frappe/assets/css/master.css" />
+    <link rel="stylesheet" href="/assets/frappe/assets/css/main.css" />
+    <!-- SWITCHER-->
+    <link href="/assets/frappe/assets/plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" />
+    <link href="/assets/frappe/assets/plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" />
+    <link href="/assets/frappe/assets/plugins/switcher/css/color2.css" rel="alternate stylesheet" title="color2" />
+    <link href="/assets/frappe/assets/plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" />
+    <link href="/assets/frappe/assets/plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" />
+    <link rel="stylesheet" href="/assets/frappe/assets/css/transitions.css" />
+
+<link href="/assets/frappe/assets/plugins/LightGallery/lightgallery.css" rel="stylesheet">
+		{%- for link in custom_web_include_css %}
+		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+		{%- endfor -%}
+
+	    {%- block head_include %}{{ head_include or "" }}{% endblock -%}
+
+		{%- block style %}{%- endblock -%}
+	{%- endblock -%}
+    <script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = {{ dev_server }};
+    </script>
+</head>
+<body data-path="{{ path }}">
+	<div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span>
+    </div>
+    <!-- Loader end-->
+    <!-- ==========================-->
+    <!-- MOBILE MENU-->
+    <!-- ==========================-->
+    <div data-off-canvas="mobile-slidebar left overlay">
+        <a class="navbar-brand scroll" href="index.html">
+                <img class="normal-logo img-resonsive visible-xs visible-sm" src="assets/frappe/assets/media/general/logo.png" alt="logo" />
+                <img class="scroll-logo img-resonsive hidden-xs hidden-sm" src="assets/frappe/assets/media/general/logo-dark.png" alt="logo" />
+            </a>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html" class="active">Home</a>
+            </li>
+            <li><a href="tours.html">Tours</a>
+            </li>
+            <li><a href="excursions.html">Excursions</a>
+            </li>
+            <li><a href="destinations.html">Destinations</a>
+            </li>
+            <li><a href="accommodations.html">Accommodations </a>
+            </li>
+            <li><a href="transfers.html">Transfers </a>
+            </li>
+            <li><a href="blog.html">Blog</a>
+            </li>
+            <li><a href="contact-us.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="l-theme animated-css" data-header="sticky" data-header-top="200" data-canvas="container">
+         {% include "templates/includes/navbar/webnavbar.html" %}
+          {% block content %}
+          {% endblock %}
+         {% include "templates/includes/footer/webfooter.html" %}
+
+    </div>
+
+	{% block base_scripts %}
+	<!-- js should be loaded in body! -->
+<!-- 	<script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>-->
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyBf-_voLhRG3aC8WTZGGJ5c7HQzR-ApwOE" async defer></script>
+  <script src="/assets/frappe/assets/libs/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript"
+		src="/assets/js/frappe-web.min.js"></script> 
+
+   <script src="/assets/frappe/assets/libs/jquery-migrate-1.2.1.js"></script>
+    <!-- Bootstrap-->
+   <script src="/assets/frappe/assets/libs/bootstrap/bootstrap.min.js"></script>
+    <!-- User customization-->
+   <script src="/assets/frappe/assets/js/custom.js"></script>
+    <!-- Headers scripts-->
+   <script src="/assets/frappe/assets/plugins/headers/slidebar.js"></script>
+   <script src="/assets/frappe/assets/plugins/headers/header.js"></script>
+    <!-- Color scheme-->
+   <script src="/assets/frappe/assets/plugins/switcher/js/dmss.js"></script>
+    <!-- Select customization & Color scheme-->
+   <script src="/assets/frappe/assets/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- Slider-->
+   <script src="/assets/frappe/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Pop-up window-->
+   <script src="/assets/frappe/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Mail scripts-->
+   <script src="/assets/frappe/assets/plugins/jqBootstrapValidation.js"></script>
+   
+    <!-- Filter and sorting images-->
+   <script src="/assets/frappe/assets/plugins/isotope/isotope.pkgd.min.js"></script>
+   <script src="/assets/frappe/assets/plugins/isotope/imagesLoaded.js"></script>
+    <!-- Progress numbers-->
+   <script src="/assets/frappe/assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+   <script src="/assets/frappe/assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
+    <!-- NoUiSlider-->
+   <script src="/assets/frappe/assets/plugins/noUiSlider/nouislider.min.js"></script>
+   <script src="/assets/frappe/assets/plugins/noUiSlider/wNumb.js"></script>
+    <!-- Animations-->
+   <script src="/assets/frappe/assets/plugins/scrollreveal/scrollreveal.min.js"></script>
+    <!-- Main slider-->
+   <script src="/assets/frappe/assets/plugins/slider-pro/jquery.sliderPro.min.js"></script>   
+   <script src="/assets/frappe/assets/plugins/LightGallery/picturefill.min.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lightgallery.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-fullscreen.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-thumbnail.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-video.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-autoplay.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-zoom.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-hash.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/lg-pager.js"></script>
+<script src="/assets/frappe/assets/plugins/LightGallery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="/assets/js/datepicker.min.js"></script>
+	{% endblock %}
+    {%- if js_globals is defined %}
+    <script>
+    {%- for key, value in js_globals.iteritems() %}
+    window.{{ key }} = "{{ value[0] }}";
+    {%- endfor -%}
+    </script>
+    {% endif -%}
+<script type="text/javascript">
+  $(document).ready(function(){
+  $(".bootstrap-select").click(function(){
+  $(this).toggleClass("open");
+  });
+
+  })
+</script>
+	{%- for link in web_include_js %}
+	<script type="text/javascript" src="{{ link|abs_url }}"></script>
+	{%- endfor -%}
+
+    {%- block script %}{%- endblock %}
+
+	<!-- csrf_token -->
+
+    {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!--    <footer class="footer area-bg">
+        <div class="area-bg__inner">
+            <div class="footer__main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="footer__logo" href="/">
+                                            <img class="img-responsive" src="/assets/frappe/assets/media/general/logo.png" alt="Logo" />
+                                        </a>
+                            <section class="footer-section footer-section_list-columns">
+                                <div class="row pad-footer footer__info">
+                                    <div class="col-md-3 col-sm-3 mb-30 text-center">
+                                        <a href="/tours">
+                                            <div class="featured-item flat-border-box">
+                                                <div class="icon text-center">
+                                                    <img src="/assets/frappe/assets/media/footer-1.png" class="b-advantages-2__icon pad-row2" alt="icon">
+                                                </div>
+                                                <div class="desc">
+                                                    <p class="b-advantages-1__footer color-white">Tours </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 mb-30 text-center">
+                                        <a href="/excursions">
+                                            <div class="featured-item flat-border-box">
+                                                <div class="icon text-center">
+                                                    <img src="/assets/frappe/assets/media/footer-2.png" class="b-advantages-2__icon pad-row2" alt="icon">
+                                                </div>
+                                                <div class="desc">
+                                                    <p class="b-advantages-1__footer color-white">Excursions</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 mb-30 text-center">
+                                        <a href="/destinations">
+                                            <div class="featured-item flat-border-box">
+                                                <div class="icon text-center">
+                                                    <img src="/assets/frappe/assets/media/footer-3.png" class="b-advantages-2__icon pad-row2" alt="icon">
+                                                </div>
+                                                <div class="desc">
+                                                    <p class="b-advantages-1__footer color-white">Destinations</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3 mb-30 text-center">
+                                        <a href="/accommodations">
+                                            <div class="featured-item flat-border-box">
+                                                <div class="icon text-center">
+                                                    <img src="/assets/frappe/assets/media/footer-4.png" class="b-advantages-2__icon pad-row2" alt="icon">
+                                                </div>
+                                                <div class="desc">
+                                                    <p class="b-advantages-1__footer color-white">Accommodations</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div>
+                                        <a class="copyright__link" href="/">Home</a>
+                                        <a class="copyright__link" href="/aboutus">About</a>
+                                        <a class="copyright__link" href="/">Sri Lanka</a>
+                                        <a class="copyright__link" href="/reviews">Client Says</a>
+                                        <a class="copyright__link" href="/termsconditions">Terms &amp; Conditions</a>
+                                        <a class="copyright__link" href="/contact-us">Contact</a>
+                                        <a class="copyright__link" href="/blogposts">Blog</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <section class="footer-section" style="padding-left: 25px;">
+
+                                <h3 class="footer-section__title ui-title-inner">Experience</h3>
+                                <ul class="footer-list list-unstyled">
+                                    {%if TourCategory %}
+                                      {%for item in TourCategory %}
+                                    <li class="">
+                                    <a class="footer-list__link" href="{{item.route}}">{{item.category_name}}</a>
+                                    </li>
+                                    {% endfor %}
+                                      {% endif %}
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                         
+                            {% if ContactInfo %}
+                            {% for item in ContactInfo %}
+                           
+                            <section class="footer-section">
+                                <h3 class="footer-section__title ui-title-inner">Contact Info</h3>
+                                <div class="footer-contact footer-contact_lg">Call us<span class="text-primary"> {{item.mobile_no}}</span>
+                                </div>
+                                <div class="footer-contact"><i class="icon icon-xs fa fa-envelope-o"></i> {{item.email_id}}</div>
+                                <div class="footer-contact"><i class="icon icon-lg fa fa-map-marker"></i>{{item.address}}</div>
+                                <div class="footer-contact"><i class="icon fa fa-clock-o"></i>Mon - Fri : {{item.from_info}} to {{item.to_info}}</div>
+                            </section>
+                            <ul class="social-net list-inline">
+                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="http://www.facebook.com/{{item.facebook_id}}"><i class="icon fa fa-facebook"></i></a>
+                                </li>
+                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="https://twitter.com/{{item.tweeter}}"><i class="icon fa fa-twitter"></i></a>
+                                </li>
+                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="http://www.linkedin.com/{{item.linked_in}}"><i class="icon fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="https://www.instagram.com/{{item.instagram}}"><i class="icon fa fa-instagram"></i></a>
+                                </li>
+                                <li class="social-net__item"><a class="social-net__link text-primary_h" href="http://www.youtube.com/{{item.youtube}}"><i class="icon fa fa-youtube-play"></i></a>
+                                </li>
+                            </ul>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">Copyrights 2018<a class="copyright__brand" href="/"> srilankantraveller</a> All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div><span class="btn-up" id="toTop">TOP</span>
+        </div>
+    </footer> -->
+
+ <footer class="footer area-bg">
+        <div class="area-bg__inner">
+          
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">Copyrights 2018<a class="copyright__brand" href="index.html"> Gsod</a> All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div><span class="btn-up" id="toTop">TOP</span>
+        </div>
+    </footer>
