@@ -6250,7 +6250,7 @@ color:#2B59C3;
   margin-bottom: 1rem;
     margin-top: 0;
     font-weight: 500;
-        font-size: 15px;
+        font-size: 20px;
 }
 
 
@@ -6274,4 +6274,61 @@ color:#2B59C3;
 }
 .pad-b{
       padding-bottom: 20px;
+}
+.share-btn.facebook {
+    background: #3b5998;
+}
+.share-btn i {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+.share-btn.twitter {
+    background: #1b95e0;
+}
+a.share-btn {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 5px;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    top: 0;
+    vertical-align: top;
+    white-space: nowrap;
+    min-width: 50px;
+    flex: 1;
+}
+.share-btn i {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+.share-btn.google {
+    background: #dd3f34!important;
+}
+.share-btn.linkedin {
+    background: #0077b5!important;
+}
+.share-btn.pinterest {
+    background: #CB2027;
+}
+.share-btn.pinterest:hover {
+      opacity: 0.8;
+}
+.share-btn.facebook:hover {
+    opacity: 0.8;
+}
+.share-btn.twitter:hover {
+    opacity: 0.8;
+}
+.share-btn.google:hover {
+    opacity: 0.8;
+}
+.share-btn.linkedin:hover {
+    opacity: 0.8;
 }
