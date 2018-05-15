@@ -178,7 +178,7 @@ body:not(.header-demo) .header.header.navbar-scrolling .normal-logo {
 
 body:not(.header-demo) .header.header.navbar-scrolling .scroll-logo {
     display: block !important;
-        margin-top: 2px;
+        margin-top: 6px;
 }
 
 body:not(.header-demo) .header.header.navbar-scrolling .navbar {
@@ -1463,7 +1463,8 @@ html [data-off-canvas*=open] {
 
 .navbar-brand {
     height: auto;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 0px;
+    /* padding: 0 0 0 15px;*/
 }
 
 .header-2 .top-bar .social-links li > a {
@@ -1487,4 +1488,8 @@ html [data-off-canvas*=open] {
 
 .header-2 .header-topbarbox-2 {
     padding-bottom: 14px;
+}
+.logo-bar{
+    padding: 5px 0 !important;
+    padding-top: 5px !important;
 }
