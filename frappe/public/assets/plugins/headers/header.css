@@ -128,7 +128,7 @@
 }
 
 .header.header-color-black .navbar .navbar-nav > li > a:hover {
-    color: #fff;
+    color: #2988DB !important;
 }
 
 .header.header-color-black .toggle-menu-button .toggle-menu-button-icon span {
@@ -149,6 +149,7 @@ body:not(.header-demo) .navbar-scrolling * {
 
 body:not(.header-demo) .header.navbar-scrolling .navbar .navbar-nav > li > a {
     color: #fff;
+    padding: 5px 0px 5px 30px;
 }
 
 body:not(.header-demo) .header.navbar-scrolling .navbar .navbar-nav > li:hover > a,

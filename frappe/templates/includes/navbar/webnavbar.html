@@ -19,12 +19,12 @@
 <header class="header header-boxed-width navbar-fixed-top header-background-white header-color-black header-topbar-dark header-logo-black header-topbarbox-1-left header-topbarbox-2-right header-navibox-1-left header-navibox-2-right header-navibox-3-right header-navibox-4-right">
     <div class="container container-boxed-width">
         <div class="top-bar">
-            <div class="container">
-                <div class="header-topbarbox-1">
+            <div class="container-fluid">
+                <div class="header-topbarbox-1" style="padding-left: 15px;">
                     <ul>
-                        <li><i class="icon fa fa-phone"></i><a href="tel:{{Phone}}"> {{Phone}}</a>
+                        <li><i class="icon fa fa-phone" style="color: #2B59C3;"></i><a href="tel:{{Phone}}"> {{Phone}}</a>
                         </li>
-                        <li><i class="icon fa fa-envelope-o"></i><a href="mailto:{{Email}}">{{Email}}</a>
+                        <li><i class="icon fa fa-envelope" style="color: #2B59C3;"></i><a href="mailto:{{Email}}">{{Email}}</a>
                         </li>
                     </ul>
                 </div>
@@ -64,21 +64,21 @@
             </div>
         </div>
         <nav class="navbar" id="nav">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="header-navibox-1">
                     <!-- Mobile Trigger Start-->
-                    <button class="menu-mobile-button visible-xs-block js-toggle-mobile-slidebar toggle-menu-button"><i class="toggle-menu-button-icon"><span></span><span></span><span></span><span></span><span></span><span></span></i>
-                    </button>
+                
                     <!-- Mobile Trigger End-->
                     <a class="navbar-brand scroll" href="/">
-                                    <img class="normal-logo img-responsive" src="/assets/frappe/assets/media/general/logo.png" alt="logo" />
+                                    <img class="normal-logo img-responsive mobile-logo" src="/assets/frappe/assets/media/general/logo.png" alt="logo" / style="width: 100%;
+    margin-bottom: 30px;padding-top: 30px;">
                                     <img class="scroll-logo hidden-xs img-responsive" src="/assets/frappe/assets/media/general/logo-dark.png" alt="logo" />
                                 </a>
                 </div>
             </div>
         </nav>
         <nav class="navbar sec-nav" id="nav" style="background-color: #044A91">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="header-navibox-1">
                     <!-- Mobile Trigger Start-->
                     <button class="menu-mobile-button visible-xs-block js-toggle-mobile-slidebar toggle-menu-button"><i class="toggle-menu-button-icon"><span></span><span></span><span></span><span></span><span></span><span></span></i>

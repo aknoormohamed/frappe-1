@@ -31,7 +31,7 @@
 -------------------------------------------------------------------*/
 /* ======= GLOBAL ======= */
 body {
-  font: 14px/1.7143 'Hind';
+  font: 14px/1.7143 'Poppins';
   color: #444;
 }
 
@@ -318,14 +318,14 @@ img.pull-left {
   padding-left: 20px;
 }
 
-.list-mark-5 li:before {
+/*.list-mark-5 li:before {
   top: 8px;
   left: 2px;
   width: 5px;
   height: 5px;
   content: '';
   background-color: #444;
-}
+}*/
 
 .list-num {
   counter-reset: list;
@@ -2618,11 +2618,13 @@ blockquote cite {
   font: 600 14px/54px Poppins;
   text-align: center;
   text-transform: uppercase;
-  color: white;
-  border-bottom-width: 3px;
+  color: #2988DB;
+  border-bottom-width: 1px;
   border-bottom-style: solid;
   border-radius: 2px 2px 0 0;
   background-color: #222;
+  border-bottom-color: #d7d7d7 !important;
+
 }
 
 .b-filter-2__group {
@@ -2717,9 +2719,9 @@ blockquote cite {
   margin: 20px auto 0;
 }
 
-.goods-group-2 {
+/*.goods-group-2 {
   padding-bottom: 60px;
-}
+}*/
 
 .b-goods-ac {
   position: relative;
@@ -2929,14 +2931,14 @@ blockquote cite {
 
 .b-goods-1__inner {
   float: left;
-  width: 66.66666667%;
+  width: 70.66666667%;
   padding-right: 35px;
   padding-left: 20px;
 }
 
 .b-goods-1__img {
   float: left;
-  width: 33.33333%;
+  width: 29.33333%;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -5108,7 +5110,7 @@ blockquote cite {
 }
 
 .b-title-page {
-  margin-top: 65px;
+  margin-top: 45px;
   margin-bottom: 4px;
   font-size: 38px;
   font-weight: 700;
@@ -5660,7 +5662,7 @@ blockquote cite {
 }
 
 .widget-list .widget-list__item {
-  margin-bottom: 8px;
+ /* margin-bottom: 8px;*/
 }
 
 .widget-list__link {
@@ -6108,4 +6110,168 @@ padding: 0 10px 15px 10px;
 
 .b-advantages-3 i{
 color:#2B59C3;
+}
+
+.breadcrumb
+{
+  text-align: left !important;
+  padding-left: 30px;
+}
+.mobile-logo {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+
+.media {
+  display: flex;
+  background: #fafbfc;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25em;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 500px) {
+  .media {
+    flex-direction: row;
+  }
+}
+.media-left {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 500px) {
+  .media-left {
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+.media-heading {
+  margin-top: 0;
+}
+.media-object {
+  width: 6.5rem;
+  max-width: inherit;
+}
+
+.community-bg {
+  background-image: linear-gradient(to bottom, rgba(46, 51, 56, 0.5), #2e3338), url("https://erpnext.org/assets/foundation/img/community-2016.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+ .intro-copy{
+        margin: 35px;
+    font-size: 25px;
+    color: white;
+}
+
+ .text-medium {
+    font-size: 1.5rem;
+}
+
+ 
+.section-padding.hero {
+  padding: 2.5rem 1rem;
+}
+@media screen and (min-width: 767px) {
+  .section-padding.hero {
+    padding: 10.5rem 1.5rem;
+  }
+}
+.section-padding {
+  padding: 2.5rem 1rem;
+}
+@media screen and (min-width: 767px) {
+  .section-padding {
+    padding: 6.5rem 1.5rem;
+  }
+}
+
+
+
+.header-1
+{
+      color: white !important;
+      padding: 15px;
+}
+
+
+/* components */
+.grid-of-four,
+.grid-of-three {
+  grid-gap: 2.5rem;
+  display: grid;
+}
+.grid-of-four {
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 500px) {
+  .grid-of-four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 767px) {
+  .grid-of-four {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 991px) {
+  .grid-of-four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.grid-of-three {
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 500px) {
+  .grid-of-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 767px) {
+  .grid-of-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.box {
+    padding: 1.5rem;
+    border: 1px solid #d1d8dd;
+    border-radius: 0.25em;
+    transition: background-color 0.3s ease-out;
+}
+
+
+.box h4,.media-body h4
+{
+  margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 500;
+        font-size: 15px;
+}
+
+
+
+.silver h2,.gold h2
+{
+      font-size: 25px;
+    padding: 18px 0;
+}
+
+.views-i{
+    padding-right: 10px;
+    color: #2988DB;
+    font-size: 16px;
+}
+.views-text{
+    font-size: 20px !important;
+    line-height: 50px !important;
+    font-weight: normal !important;
+    color: #212121 !important;
+}
+.pad-b{
+      padding-bottom: 20px;
 }

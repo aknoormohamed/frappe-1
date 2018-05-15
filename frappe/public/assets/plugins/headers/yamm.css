@@ -104,3 +104,7 @@
 .yamm  li.dropdown:hover > .dropdown-menu {
     margin-top: 10px;
 }
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+	background-color: #2B59C3;
+	color: #fff;
+}
